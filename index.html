@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hundedisplay</title>
+</head>
+<body>
+    
+<h1>Hundedisplay</h1>
+
+<div id="app"></div>
+
+<script>
+
+    let = dogImageOne = "1";
+    let = dogNameOne = "Bonzo";
+    let = dogAgeOne = "Seven";
+    let = dogImageTwo = "2";
+    let = dogNameTwo = "Tinka";
+    let = dogAgeTwo = "Six";
+    let = dogImageThree = "3";
+    let = dogNameThree = "Nova";
+    let = dogAgeThree = "Eight";
+    let = dogImageFour = "4";
+    let = dogNameFour = "Enzo";
+    let = dogAgeFour = "Nine";
+
+    let = currentImage = "0";
+    let = currentName = "0";
+    let = currentAge = "0";
+    
+    let number = 0;
+
+    updateView()
+    function updateView() {
+        document.getElementById("app").innerHTML = /*HTML*/ `
+        <div>${currentImage}</div>
+        <div>${currentName}</div>
+        <div>${currentAge}</div>
+
+        <button onclick = "changeNumber()">Change dog</button>
+        `;
+
+    }
+
+    function changeDog () {
+        if (number == 1) {
+            currentImage = dogImageOne;
+            currentName = dogNameOne;
+            currentAge = dogAgeOne;
+    }
+        else if (number == 2) {
+            currentImage = dogImageTwo;
+            currentName = dogNameTwo;
+            currentAge = dogAgeTwo;
+    }
+        else if (number == 3) {
+            currentImage = dogImageThree;
+            currentName = dogNameThree;
+            currentAge = dogAgeThree;
+    }
+    
+        else {
+            currentImage = dogImageFour;
+            currentName = dogNameFour;
+            currentAge = dogAgeFour;
+    }
+
+        updateView();
+}
+
+    function changeNumber() {
+        number++
+        if (number >= 4) {
+            number = 0;
+        }
+        changeDog()
+    }
+
+    </script>
+
+
+
+</body>
+</html>
